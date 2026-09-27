@@ -3,7 +3,7 @@ import { motion, useReducedMotion, type Variants } from 'motion/react';
 import { RESTAURANT_DATA } from '../data/restaurant';
 import { MagneticButton } from './MagneticButton';
 import { ArrowUpRight, MessageCircle, Star, MapPin, Clock, Flame } from 'lucide-react';
-import burgerCutout from '../assets/images/ines_burger_cutout_transparent.png';
+import burgerCutout from '../assets/images/ines_burger_clean_cutout_1790524003253.jpg';
 
 export const Hero: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
