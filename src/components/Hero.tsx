@@ -3,6 +3,7 @@ import { motion, useReducedMotion, type Variants } from 'motion/react';
 import { RESTAURANT_DATA } from '../data/restaurant';
 import { MagneticButton } from './MagneticButton';
 import { ArrowUpRight, MessageCircle, Star, MapPin, Clock, Flame } from 'lucide-react';
+import burgerCutout from '../assets/images/ines_burger_cutout_transparent.png';
 
 export const Hero: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -116,14 +117,14 @@ export const Hero: React.FC = () => {
         <div className="relative w-full">
           
           {/* BLOCO DO TÍTULO E HAMBÚRGUER LADO A LADO COM SOBREPOSIÇÃO COLADA */}
-          <div className="relative flex flex-col lg:flex-row items-start lg:items-center justify-between">
+          <div className="relative min-h-[610px] sm:min-h-[650px] lg:min-h-[640px]">
             
             {/* PRIMEIRA CAMADA (z-10): TEXTO GRANDE À ESQUERDA */}
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="show"
-              className="relative z-10 w-full lg:w-[65%] xl:w-[68%] select-none pr-0"
+              className="relative z-10 w-full lg:w-[72%] xl:w-[74%] select-none pr-0"
             >
               {/* Badge da marca */}
               <motion.div variants={blurSharpVariant} className="mb-2 sm:mb-3">
@@ -136,21 +137,21 @@ export const Hero: React.FC = () => {
               {/* 1. INÊS BURGUER */}
               <motion.h1
                 variants={blurSharpVariant}
-                className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.4rem] xl:text-[6.6rem] font-black uppercase tracking-tight font-display text-white leading-[0.92] whitespace-nowrap"
+                className="text-[2.65rem] sm:text-6xl md:text-7xl lg:text-[5.4rem] xl:text-[6.6rem] font-black uppercase tracking-tight font-display text-white leading-[0.88] whitespace-nowrap"
               >
                 INÊS BURGUER
               </motion.h1>
 
               {/* 2. SEU HAMBÚRGUER (as letras finais 'GUER' ficam sob o hambúrguer) */}
               <motion.div variants={blurSharpVariant} className="leading-[0.92] mt-1 sm:mt-2">
-                <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-[4.6rem] xl:text-[5.6rem] font-black uppercase tracking-tight font-display text-[#FADAA2]/95 whitespace-nowrap">
+                <span className="block text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[4.6rem] xl:text-[5.6rem] font-black uppercase tracking-tight font-display text-[#FADAA2]/95 whitespace-nowrap">
                   SEU HAMBÚRGUER
                 </span>
               </motion.div>
 
               {/* 3. FAVORITO. (as letras finais 'TO.' ficam sob o hambúrguer) */}
               <motion.div variants={blurSharpVariant} className="leading-[0.92] mt-1 sm:mt-2">
-                <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-[5.2rem] xl:text-[6.4rem] font-black uppercase tracking-tight font-display italic bg-gradient-to-r from-[#FDE68A] via-[#E5A93C] to-[#EA580C] bg-clip-text text-transparent whitespace-nowrap">
+                <span className="block text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.2rem] xl:text-[6.4rem] font-black uppercase tracking-tight font-display italic bg-gradient-to-r from-[#FDE68A] via-[#E5A93C] to-[#EA580C] bg-clip-text text-transparent whitespace-nowrap">
                   FAVORITO.
                 </span>
               </motion.div>
@@ -231,8 +232,9 @@ export const Hero: React.FC = () => {
               }}
               onMouseEnter={() => setIsHoveredBurger(true)}
               onMouseLeave={() => setIsHoveredBurger(false)}
-              className="relative lg:absolute lg:right-[-2%] xl:right-[1%] lg:top-[16%] xl:top-[12%] z-20 w-[300px] sm:w-[400px] md:w-[460px] lg:w-[480px] xl:w-[560px] aspect-[4/5] flex items-center justify-center mt-6 lg:mt-0 pointer-events-auto cursor-pointer"
+              className="absolute right-[-18%] sm:right-[-10%] md:right-[-5%] lg:right-[-7%] xl:right-[-4%] top-[16%] sm:top-[15%] lg:top-[9%] z-20 w-[245px] sm:w-[360px] md:w-[450px] lg:w-[510px] xl:w-[590px] aspect-[4/5] flex items-center justify-center pointer-events-auto cursor-pointer"
             >
+              <span className="absolute inset-[18%] rounded-full bg-[#E5A93C]/16 blur-[70px] animate-pulse-glow" aria-hidden="true" />
               {/* Hambúrguer flutuando com sobreposição direta sobre as letras */}
               <motion.div
                 animate={{
@@ -253,14 +255,9 @@ export const Hero: React.FC = () => {
                 className="relative w-full h-full flex items-center justify-center select-none pointer-events-none"
               >
                 <img
-                  src="/src/assets/images/ines_cheeseburger_isolated_1790523768830.jpg"
+                  src={burgerCutout}
                   alt="Hambúrguer artesanal assinatura Inês Burguer com picles, tomate, queijo cheddar derretido e pão de gergelim"
-                  className="w-full h-full object-contain filter select-none pointer-events-none"
-                  style={{
-                    // Máscara com transição limpa para corte do fundo
-                    maskImage: 'radial-gradient(ellipse at 50% 50%, black 68%, transparent 98%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse at 50% 50%, black 68%, transparent 98%)',
-                  }}
+                  className="relative z-10 w-full h-full object-contain select-none pointer-events-none drop-shadow-[0_18px_24px_rgba(0,0,0,0.28)]"
                   loading="eager"
                 />
               </motion.div>
