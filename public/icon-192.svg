@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <radialGradient id="bgGlow192" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2A241A" />
+      <stop offset="60%" stop-color="#141417" />
+      <stop offset="100%" stop-color="#0A0A0B" />
+    </radialGradient>
+    <linearGradient id="goldGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FADAA2" />
+      <stop offset="45%" stop-color="#E5A93C" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="192" height="192" rx="40" fill="url(#bgGlow192)" />
+  <rect width="190" height="190" x="1" y="1" rx="39" fill="none" stroke="rgba(229,169,60,0.3)" stroke-width="1.5" />
+
+  <!-- Burger Icon Illustration -->
+  <g transform="translate(36, 38)">
+    <path d="M 10 45 C 10 10, 110 10, 110 45 Z" fill="url(#goldGrad192)" />
+    <path d="M 5 52 L 115 52 L 95 68 L 75 56 L 55 70 L 35 56 L 15 66 Z" fill="#FBBF24" />
+    <rect x="8" y="60" width="104" height="15" rx="6" fill="#78350F" />
+    <path d="M 12 80 L 108 80 C 108 95, 12 95, 12 80 Z" fill="url(#goldGrad192)" />
+  </g>
+
+  <text x="96" y="152" font-family="'Syne', sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#EDEDEA" text-anchor="middle">
+    INÊS
+  </text>
+  <text x="96" y="168" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" letter-spacing="2" fill="#E5A93C" text-anchor="middle">
+    ATIBAIA
+  </text>
+</svg>

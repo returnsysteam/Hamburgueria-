@@ -1,0 +1,6 @@
+{
+  "name": "Inês Burguer — Hamburgueria em Atibaia",
+  "description": "Site institucional premium da Inês Burguer em Atibaia, SP. Hambúrgueres artesanais, sabor marcante e experiência gastronômica única.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
